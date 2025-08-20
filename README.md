@@ -35,23 +35,3 @@ This project is implemented in a Jupyter notebook format. Here's a breakdown of 
 *   **Save the Model:** Save the trained model in the Keras format for future use or deployment.
 *   **Image Prediction Function:** Define a Python function that takes an image file path and the trained model as input, preprocesses the image, and returns the model's prediction (probability of pneumonia).
 *   **Perform Prediction on Uploaded Image:** Use the defined function to make a prediction on an image uploaded by the user and print the predicted class based on a threshold of 0.5.
-
-## How to Use
-
-To run this notebook and reproduce the results, follow these steps:
-
-### Prerequisites
-
-Make sure you have the following installed:
-
-*   **Python 3.6+**
-*   **Jupyter Notebook** or **JupyterLab**
-*   **Git** (if cloning the repository)
-
-### Obtaining the Notebook
-
-You can obtain the notebook file by cloning the GitHub repository:
-
-```bash
-git clone <repository_url>
-cd <repository_name>
