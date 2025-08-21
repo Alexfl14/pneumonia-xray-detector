@@ -13,10 +13,8 @@ The model utilizes a transfer learning approach based on the **VGG16** convoluti
 ## Code Structure
 This project is implemented in a Jupyter notebook format. Here's a breakdown of the key steps and their corresponding code cells:
 
-*   **Data Loading and Unzipping:** Download and extract the dataset from Kaggle.
-*   **Setup Dataset Paths and Parameters:** Define variables for dataset directories, image dimensions (height and width), and batch size.
+*   **Data Loading:** Download and extract the dataset via Kaggle API.
 *   **Create TensorFlow Datasets:** Load the images from the directories into TensorFlow `Dataset` objects for training, validation, and testing, automatically inferring class labels from folder names.
-*   **Visualize Sample Images:** Display a few example images from the training dataset along with their class labels to get a visual understanding of the data.
 *   **Prepare Data for Model:** Apply caching and prefetching to the datasets to optimize data loading and improve training performance.
 *   **Define Model Architecture:**
     *   Load the pre-trained VGG16 model as the base, excluding its top classification layers.
@@ -29,9 +27,6 @@ This project is implemented in a Jupyter notebook format. Here's a breakdown of 
     *   Add a final dense layer with a sigmoid activation for binary classification (Pneumonia vs. Normal).
     *   Create the final Keras Model by specifying the input and output layers.
 *   **Compile the Model:** Configure the model for training by specifying the optimizer (Adam), the loss function (binary crossentropy for binary classification), and the evaluation metric (accuracy).
-*   **Train the Model:** Train the compiled model using the training dataset and validate its performance on the validation dataset over a specified number of epochs.
-*   **Visualize Training History:** Plot the training and validation accuracy and loss over epochs to evaluate the model's learning progress and identify potential overfitting.
+*   **Train the Model:** Train the compiled model using the training dataset and validate its performance on the validation dataset.
 *   **Evaluate the Model:** Assess the trained model's performance on the unseen test dataset to get an estimate of its generalization capability.
-*   **Save the Model:** Save the trained model in the Keras format for future use or deployment.
-*   **Image Prediction Function:** Define a Python function that takes an image file path and the trained model as input, preprocesses the image, and returns the model's prediction (probability of pneumonia).
-*   **Perform Prediction on Uploaded Image:** Use the defined function to make a prediction on an image uploaded by the user and print the predicted class based on a threshold of 0.5.
+*   **Test it for yourself:** Upload a photo (jpg/jpeg/png) and run it through the model to test its accuracy on your own.
